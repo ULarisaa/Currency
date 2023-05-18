@@ -12,13 +12,12 @@ const CurrencyChart = ({ currencyCode }) => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Generate sample data for the last 30 days
       const currentDate = new Date();
       const currencyData = [['Date', 'Value']];
 
       for (let i = 29; i >= 0; i--) {
         const date = new Date(currentDate.getTime() - i * 24 * 60 * 60 * 1000);
-        const value = Math.random() * 10; // Random value
+        const value = Math.random() * 10; 
         currencyData.push([date, value]);
       }
 

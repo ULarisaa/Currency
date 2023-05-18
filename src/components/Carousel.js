@@ -3,7 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import data from '../currencies-with-flags.json';
 import axios from 'axios';
-import CurrencyChart from './CurrencyChart'; // Import the component for displaying the currency chart
+import CurrencyChart from './CurrencyChart';
 
 const Carousel = () => {
   const [currencyData, setCurrencyData] = useState(null);
@@ -18,7 +18,6 @@ const Carousel = () => {
       const response = await axios.get('https://victorysquarepartners.com/curs1.php');
       const xmlData = response.data;
 
-      // Handle the XML data without using parseString
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
       const cubeData = xmlDoc.querySelectorAll('Cube Rate');
@@ -93,7 +92,7 @@ const Carousel = () => {
         }}
       >
         Save Currencies
-      </button> {/* Button to trigger saving currencies */}
+      </button> 
       {selectedCurrency && <CurrencyChart currencyCode={selectedCurrency} />} {/* Display the currency chart */}
     </div>
   );
