@@ -39,7 +39,7 @@ const Carousel = () => {
 
   const saveCurrenciesToDatabase = async () => {
     try {
-      await axios.post('mongodb+srv://larisa:larisa@cluster0.sas9vb5.mongodb.net/', { currencies: currencyData });
+      await axios.post('mongodb+srv://larisa:@cluster0.sas9vb5.mongodb.net/', { currencies: currencyData });
       console.log('Currencies saved successfully!');
     } catch (error) {
       console.error('Error saving currencies:', error);

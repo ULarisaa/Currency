@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 const app = express();
 const port = 3000;
 
-const mongoURL = 'mongodb+srv://larisa:larisa@cluster0.sas9vb5.mongodb.net/';
+const mongoURL = 'mongodb+srv://larisa:@cluster0.sas9vb5.mongodb.net/';
 const client = new MongoClient(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(express.json());
